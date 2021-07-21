@@ -11,9 +11,9 @@ class PowerTest {
     Power power = new Power();
 
     @ParameterizedTest
-    @ValueSource(ints = {0,2,4,6,8,16,32})
+    @ValueSource(ints = {0,2,4,6,8,12,16,32})
     void powerOf2(int p) {
-        assertEquals(Math.pow(2,p), power.pow(2,p));
+        assertEquals((int)Math.round(Math.pow(2,p)), power.pow(2,p));
     }
 
     @ParameterizedTest

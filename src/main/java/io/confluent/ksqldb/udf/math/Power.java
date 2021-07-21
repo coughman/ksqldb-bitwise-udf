@@ -8,8 +8,8 @@ import io.confluent.ksql.function.udf.UdfDescription;
 public class Power {
 
     @Udf(description = "int version")
-    public double pow(int x, int y) {
-        return Math.pow(x,y);
+    public int pow(int x, int y) {
+        return (int)Math.round(Math.pow(x,y));
     }
 
     @Udf(description = "double version")
